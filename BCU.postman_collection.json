@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "c94f9e98-40d7-43f5-a9af-58ba6e9e88ce",
+		"name": "BCU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23531096",
+		"_collection_link": "https://www.postman.com/sample-8171/workspace/bhavani-workspace/collection/23531096-c94f9e98-40d7-43f5-a9af-58ba6e9e88ce?action=share&source=collection_link&creator=23531096"
+	},
+	"item": [
+		{
+			"name": "Course/Page",
+			"item": [
+				{
+					"name": "courseswithpageNumber",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Baseurl}}/course/page/{{coursepageNumber}}",
+							"host": [
+								"{{Baseurl}}"
+							],
+							"path": [
+								"course",
+								"page",
+								"{{coursepageNumber}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courseswithcourseId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Baseurl}}/course/{{courseId}}",
+							"host": [
+								"{{Baseurl}}"
+							],
+							"path": [
+								"course",
+								"{{courseId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatecoursenamewithcourseId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Baseurl}}/course/{{courseId}}/name?newName=Food%20technology",
+							"host": [
+								"{{Baseurl}}"
+							],
+							"path": [
+								"course",
+								"{{courseId}}",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "Food%20technology"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event/Page",
+			"item": [
+				{
+					"name": "eventswithpageNumber",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Baseurl}}/event/page/{{eventpageNumber}}",
+							"host": [
+								"{{Baseurl}}"
+							],
+							"path": [
+								"event",
+								"page",
+								"{{eventpageNumber}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eventswitheventId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Baseurl}}/event/{{eventId}}",
+							"host": [
+								"{{Baseurl}}"
+							],
+							"path": [
+								"event",
+								"{{eventId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateeventnamewitheventId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{Baseurl}}/event/{{eventId}}/name?newName=Sellyoak",
+							"host": [
+								"{{Baseurl}}"
+							],
+							"path": [
+								"event",
+								"{{eventId}}",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "Sellyoak"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student/Page",
+			"item": [
+				{
+					"name": "studentswithpageNumber",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Baseurl}}/student/page/{{studentpageNumber}}",
+							"host": [
+								"{{Baseurl}}"
+							],
+							"path": [
+								"student",
+								"page",
+								"{{studentpageNumber}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "studentswithstudentId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Baseurl}}/student/{{studentId}}",
+							"host": [
+								"{{Baseurl}}"
+							],
+							"path": [
+								"student",
+								"{{studentId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatestudentnamewithstudentId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{Baseurl}}/student/{{studentId}}/name?newName=Gary Miller1",
+							"host": [
+								"{{Baseurl}}"
+							],
+							"path": [
+								"student",
+								"{{studentId}}",
+								"name"
+							],
+							"query": [
+								{
+									"key": "newName",
+									"value": "Gary Miller1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "coursepageNumber",
+			"value": "0",
+			"type": "string"
+		},
+		{
+			"key": "courseId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "eventpageNumber",
+			"value": "0",
+			"type": "string"
+		},
+		{
+			"key": "eventId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "studentpageNumber",
+			"value": "0",
+			"type": "string"
+		},
+		{
+			"key": "studentId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "https://localhost:62723",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
